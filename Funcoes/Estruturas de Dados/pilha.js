@@ -4,7 +4,6 @@ class Pilha {
     constructor(){
         this.itens = []
     }
-
     push(item){
         this.itens.push(item);
     }
