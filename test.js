@@ -1,6 +1,11 @@
-function somar(x,y){
-    return x+y
+function fat(x){
+    let num = x
+    let soma = 1
+    for (let c = 1;x!=1;c++){
+        soma *= x
+        x--
+    }
+    console.log(`Fatorial de ${num} = ${soma}`)
 }
 
-let total = somar(20,1)
-console.log(total)
+fat(4)
