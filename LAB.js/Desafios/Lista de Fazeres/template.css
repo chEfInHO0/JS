@@ -1,0 +1,41 @@
+body{
+    font-size: 35px;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.center{
+    text-align: center;
+}
+.space{
+    margin-top: 20px;
+}
+.task{
+    width: 400px;
+    height: 50px;
+    font-size: 1em;
+}
+.lista{
+    margin:auto;
+    margin-top: 5%;
+    border: 1px solid;
+    width: 500px;
+}
+.btn{
+    width: 200px;
+    margin-top: 50px;
+    font-size: 0.8em;
+}
+.tasks{
+    font-size: 1em;
+}
+.tasks ul{
+    list-style-type: none;
+    text-align: start;
+}
+.line{
+    text-align: center;
+}
+.striketxt{
+    text-decoration: line-through;
+}

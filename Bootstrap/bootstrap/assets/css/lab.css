@@ -1,0 +1,11 @@
+.borda{
+    border: 1px solid;
+}
+.color1{
+    background-color: cyan;
+    padding: 10px;
+}
+.color2{
+    background-color: darkcyan;
+    padding: 10px;
+}

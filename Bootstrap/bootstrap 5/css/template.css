@@ -1,0 +1,124 @@
+.container-fluid{
+    height: 100vh;
+    background-color: grey;
+}
+.transition{
+    transition: 1.2s all;
+}
+.img-fluid{
+    max-width: 200px;
+}
+.content-area-hired, .content-area-hire{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 20vh;
+    transition: 0.7s all;
+    height: 50vh;
+    width: 100%;
+}
+.holder-area{
+    padding: 150px 0px 0px 0px;
+    transition: 2s all;
+    height: 100vh;
+    width: 50%;
+}
+.hire{
+    width: 51%;
+    transition: 1.4s;
+    z-index: 3;
+    position: fixed;
+    background-color:#198754;
+}
+.hired{
+    width: 50%;
+    transition: 1.4s;
+    z-index: 3;
+    left: 50vw;
+    position: fixed;
+    background-color: #fd7e14;
+}
+.content-area-hover{
+    height: 40vh;
+    width: 100vw;
+}
+.holder-area-hover{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.hired:hover{
+    left: 0;
+}
+.msg{
+    color: #fff;
+    transition: 1s all;
+}
+.safe-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    height: 120px;
+    font-size: 2.5em;
+}
+.img-fluid{
+    transition: 1s all;
+    max-width: 300px;
+    padding: 50px;
+}
+.img-fluid:hover{
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.info-container{
+    padding: 50px;
+    border-radius: 50%;
+    transition: 0.6s all;
+    margin-top: 200px;
+    max-width: 800px;
+    max-height: 800px;
+}
+.info-container h4 {
+    color: #198754;
+    visibility: hidden;
+}
+.secondary-coloring:hover h4{
+    color: #fd7e14;
+}
+.info-container:hover h4 {
+    visibility: visible;
+}
+.secondary-btn{
+    color: #fd7e14;
+    background-color: #fff;
+    border: 1px solid #fd7e14;
+}
+.secondary-btn:hover{
+    color: #fff;
+    background-color: #fd7e14;
+    border: 1px solid #fff;
+}
+.info-container:hover{
+    border: 5px solid ;
+    background-color: #fff;
+}
+.btn{
+    background-color: #fff;
+    height: 100px;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.none{
+    display: none;
+}
+.mrg{
+    margin-top: 50px;
+}
+.mrg:hover{
+    padding: 5px;
+    margin-bottom: 40px;
+}

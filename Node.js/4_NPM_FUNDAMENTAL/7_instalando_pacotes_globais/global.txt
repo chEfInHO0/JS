@@ -1,0 +1,3 @@
+npm install <nome> -g
+npm link <nome> // copia os arquivos do pacote para a pasta onde está sendo executado o projeto, casos como do lodash são necessários ter os aquivos presentes mesmo instalados de forma global
+//a flag -g instala pacotes de maneira global

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .color {
+            background-color: aqua;
+            border: #aaa 1px solid;
+        }
+
+        .color-cel {
+            background-color: beige;
+            border: #ddd 1px solid;
+        }
+
+        .big {
+            height: 50px;
+            border: #aaa 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col" style="background-color: blue; color: #fff;">teste</div>
+            <div class="col">teste</div>
+            <div class="col" style="background-color: blue; color: #fff;">teste</div>
+        </div>
+        <div class="row">
+            <div class="col-1 color">.col-1</div>
+            <div class="w-100 "></div>
+            <div class="col-2 color">.col-2</div>
+            <div class="w-100"></div>
+            <div class="col-3 color">.col-3</div>
+            <div class="w-100"></div>
+            <div class="col-4 color">.col-4</div>
+            <div class="w-100"></div>
+            <div class="col-5 color">.col-5</div>
+            <div class="w-100"></div>
+            <div class="col-6 color">.col-6</div>
+            <div class="w-100"></div>
+            <div class="col-7 color">.col-7</div>
+            <div class="w-100"></div>
+            <div class="col-8 color">.col-8</div>
+            <div class="w-100"></div>
+            <div class="col-9 color">.col-9</div>
+            <div class="w-100"></div>
+            <div class="col-10 color">.col-10</div>
+            <div class="w-100"></div>
+            <div class="col-11 color">.col-11</div>
+            <div class="w-100"></div>
+            <div class="col-12 color">.col-12</div>
+        </div>
+        <div class="row">
+            <div class="col-sm color-cel">.col-sm</div>
+            <div class="col-md color-cel">.col-md</div>
+            <div class="col-lg color-cel">.col-lg</div>
+        </div>
+        <div class="row justify-content-start">
+            <div class="col-3 color">.justify-content-start</div>
+            <div class="col-3 color">.justify-content-start</div>
+            <div class="col-3 color">.justify-content-start</div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-3 color">.justify-content-end</div>
+            <div class="col-3 color">.justify-content-end</div>
+            <div class="col-3 color">.justify-content-end</div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-3 color">.justify-content-center</div>
+            <div class="col-3 color">.justify-content-center</div>
+            <div class="col-3 color">.justify-content-center</div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-3 color">.justify-content-around</div>
+            <div class="col-3 color">.justify-content-around</div>
+            <div class="col-3 color">.justify-content-around</div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-3 color">.justify-content-between</div>
+            <div class="col-3 color">.justify-content-between</div>
+            <div class="col-3 color">.justify-content-between</div>
+        </div>
+        <div class="row align-items-start big">
+            <div class="col-3 color">.align-items-start</div>
+            <div class="col-3 color">.align-items-start</div>
+            <div class="col-3 color">.align-items-start</div>
+        </div>
+        <div class="row align-items-end big">
+            <div class="col-3 color ">.align-items-end</div>
+            <div class="col-3 color">.align-items-end</div>
+            <div class="col-3 color">.align-items-end</div>
+        </div>
+        <div class="row align-items-center big">
+            <div class="col-3 color ">.align-items-center</div>
+            <div class="col-3 color">.align-items-center</div>
+            <div class="col-3 color">.align-items-center</div>
+        </div>
+        <div class="row big">
+            <div class="col-3 color align-self-start">.align-self-start</div>
+            <div class="col-3 color align-self-center">.align-self-center</div>
+            <div class="col-3 color align-self-end">.align-self-end</div>
+        </div>
+        <div class="row">
+            <div class="col color-cel order-1">Segunda(1)</div>
+            <div class="col color-cel order-2">Terça(2)</div>
+            <div class="col color-cel order-3">Quarta(3)</div>
+            <div class="col color-cel order-4">Quinta(4)</div>
+            <div class="col color-cel order-5">Sexta(5)</div>
+            <div class="col color-cel order-6">Sábado(6)</div>
+            <div class="col color-cel order-7">Domingo(7)</div>
+        </div>
+        <div class="row">
+            <div class="col color-cel order-7">Segunda(7)</div>
+            <div class="col color-cel order-6">Terça(6)</div>
+            <div class="col color-cel order-5">Quarta(5)</div>
+            <div class="col color-cel order-4">Quinta(4)</div>
+            <div class="col color-cel order-3">Sexta(3)</div>
+            <div class="col color-cel order-2">Sábado(2)</div>
+            <div class="col color-cel order-1">Domingo(1)</div>
+        </div>
+        <div class="row">
+            <div class="col color-cel order-2">Segunda(2)</div>
+            <div class="col color-cel order-6">Terça(6)</div>
+            <div class="col color-cel order-1">Quarta(1)</div>
+            <div class="col color-cel order-5">Quinta(5)</div>
+            <div class="col color-cel order-4">Sexta(4)</div>
+            <div class="col color-cel order-3">Sábado(3)</div>
+            <div class="col color-cel order-1">Domingo(1)</div>
+        </div>
+        <div class="row text-left">
+            <div class="col color">Texto a esquerda</div>
+            <div class="col color">Texto a esquerda</div>
+            <div class="col color">Texto a esquerda</div>
+        </div>
+        <div class="row text-center">
+            <div class="col color">Texto no centro</div>
+            <div class="col color">Texto no centro</div>
+            <div class="col color">Texto no centro</div>
+        </div>
+        <div class="row text-right">
+            <div class="col color">Texto a direita</div>
+            <div class="col color">Texto a direita</div>
+            <div class="col color">Texto a direita</div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+body,html{
+    width: 100vw;
+    height: 100vh;
+}
+i,a{
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+}
+.content-space{
+    color: #aaa;
+    background-color: #fff;
+    min-height: 100vh;
+    max-height: 200vh;
+}
+.custom-space{
+    min-height: 100vh;
+    max-height: 300vh;
+
+    
+}
+.custom-space-clock{
+    min-height: 60vh;
+    max-height: 100vh;
+
+}
+.btn{
+    min-width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2em;
+    letter-spacing: 2px;
+}
+.column{
+    background-color: #198754;
+    color: #fff;
+}
+.msg,.font-md,.time-date,.currentState{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+.img-fluid{
+    width: 100px;
+    height: 50px;
+    transition: 0.3s all;
+    border-radius: 10%;
+    padding: 10px;
+}
+.img-fluid:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 8px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s all;
+}
+.mrg{
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 3px;
+
+}
+.mrg:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.btn-small{
+    border:1px solid #fff;
+    height: 35px;
+    font-size: 1em;
+    max-width: 200px;
+    color: #fff;
+}
+.btn-small:hover{
+    background-color: #fff;
+    color: #198754;
+    border: 1px solid #fff;
+}
+.contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.currentState{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    max-width: 500px;
+    border-radius: 30px;
+}
+.red{
+    background-color: #b02a37;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.green{
+    background-color: #146c43;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.gen-info:hover{
+    text-decoration: underline;
+}
+.space{
+    height: 100px;
+}

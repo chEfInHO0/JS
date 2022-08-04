@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/templateEnterprise.css">
+</head>
+<body>
+    <div class="area-holder">
+        <header class="center">
+            <h1>
+                Bem vindo(a), como podemos te ajudar <span class="morfo"></span><span class="digit"></span>?
+            </h1>
+        </header>
+        <h3>
+            <ul class="menu">
+                <li onclick="window.location.assign('http://127.0.0.1:5500/Outros/Site/index.html')">Home</li>
+                <li>Sobre</li>
+                <li>Contato</li>
+                <a href=""><li>Solicitar Orçamento</li></a>
+            </ul>
+        </h3>
+    </div>
+    <form action="">
+    <div class="container">
+        <label for="type">
+            <legend>Tipo do Contratante: </legend>
+            <div class="select-field">
+                <input type="radio" onclick="changeType(this)" id="empresa" name="type" value="da Empresa" required>
+                <label for="empresa" class="point">Empresa</label>
+                <input type="radio" onclick="changeType(this)" id="condominio" name="type" value="do Condominio" required>
+                <label for="condominio" class="point">Condominio</label>
+                <input type="radio" onclick="changeType(this)" id="outro" name="type" value="do Comercio" required>
+                <label for="outro" class="point">Outro</label>
+            </div>
+        </label><br><br>
+        <label for="name">
+            <legend>Nome do Responsável: </legend>
+            <input class="text-field" type="text" id="name" required>
+        </label><br><br>
+        <label for="cname">
+            <legend>Nome <span class="type">da Empresa</span>: </legend>
+            <input class="text-field" type="text" id="cname" required>
+        </label><br><br>
+        <label for="email">
+            <legend>E-Mail:</legend>
+            <input class="text-field" type="email" id="email" required>
+        </label><br><br>
+        <label for="dept">
+            <legend>Departamento:</legend>
+            <input class="text-field" type="text" id="dept" required>
+        </label><br><br>
+        <label for="tel">
+            <legend>Telefone:</legend>
+            <input class="text-field" type="tel" id="tel" required>
+        </label><br><br>
+        <label for="srv">
+            <legend>Serviço que Gostaria de contratar:</legend>
+            <select name="srv" id="srv" class="point" required>
+                <option value="Mão de Obra Administrativa">Mão de Obra Administrativa</option>
+                <option value="Mão de Obra Operacional / Industrial">Mão de Obra Operacional / Industrial</option>
+                <option value="Limpeza / Conservação">Limpeza / Conservação</option>
+                <option value="Zelador / Jardinagem">Zelador / Jardinagem</option>
+                <option value="Recepção / Telefonia">Recepção / Telefonia</option>
+                <option value="Copa / Cozinha">Copa / Cozinha</option>
+                <option value="Portaria / Controle de Acesso">Portaria / Controle de Acesso</option>
+                <option value="Segurança / Vigilância Patrimonial">Segurança / Vigilância Patrimonial</option>
+                <option value="Segurança do Trabalho / Bombeiro Civil">Segurança do Trabalho / Bombeiro Civil</option>
+                <option value="Motorista">Motorista</option>
+                <option value="Outros">Outros</option>
+            </select>
+        </label><br><br>
+        <label for="job">
+            <legend>Tipo do Contratante: </legend>
+            <div class="select-field">
+                <input type="radio" id="temp" name="job" value="Temporário" required>
+                <label for="temp" class="point">Temporário</label>
+                <input type="radio" id="clt" name="job" value="CLT" required>
+                <label for="clt" class="point">CLT</label>
+            </div>
+        </label><br><br>
+        <label for="details">
+            <legend>Detalhes:</legend>
+            <textarea class="info-field" name="details" id="details"></textarea>
+        </label><br><br>
+        <label for="send">
+            <input class="send-field btn" type="submit" value="Enviar">
+        </label>
+    </div>
+    </form>
+    <script src="assets/js/scriptEnterprise.js"></script>
+</body>
+</html>

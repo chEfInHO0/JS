@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/templateTeste.css">
+</head>
+<body>
+    <div class="locate">
+        <div class="box">
+            <input type="text" class="selected" onclick="inOut()" readonly>
+            <ul class="lista fog">
+                <li class="item 1st" onclick="getValue(this)">A</li>
+                <li class="item 2nd" onclick="getValue(this)">B</li>
+                <li class="item 3rd" onclick="getValue(this)">C</li>
+                <li class="item 4th" onclick="getValue(this)">D</li>
+                <li class="item 5th" onclick="getValue(this)">E</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        const box = document.querySelector('.selected')
+        const list = document.querySelector('.lista')
+        function inOut(){
+            if(list.classList.contains('fog')){
+                list.classList.remove('fog')
+            }else{
+                list.classList.add('fog')
+            }
+        }
+        function getValue(btn){
+            clear()
+            console.log(btn.innerHTML)
+            box.value = btn.innerHTML
+            btn.classList.add('choose')
+            inOut()
+        }
+        function clear(){
+            let allOpt = document.querySelectorAll('.item')
+            for (let c = 0; c < allOpt.length; c++){
+                allOpt[c].classList.remove('choose')
+            }
+        }
+    </script>
+</body>
+</html>

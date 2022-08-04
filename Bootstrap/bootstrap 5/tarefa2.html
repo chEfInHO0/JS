@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <title>Tarefa 2</title>
+    <style>
+        .pad {
+            padding: 10px;
+            margin-top: 20px;
+            background-color: lightsalmon;
+            border: 1px solid #000;
+        }
+
+        .coloring1 {
+            color: #fff;
+        }
+
+        .coloring2 {
+            color: #0000ff;
+        }
+
+        .coloring3 {
+            color: #ff0000;
+        }
+
+        .font-sm {
+            transition: 1s all;
+            border: 2px solid #fff;
+            padding: 25px;
+            font-size: 1.2em;
+        }
+
+        .font-md {
+            transition: 1s all;
+            border: 2px solid #fff;
+            padding: 20px;
+            font-size: 1.7em;
+        }
+
+        .no-pad:hover {
+            padding: 0px;
+        }
+
+        .font-lg {
+            transition: 1s all;
+            border: 2px solid #fff;
+            padding: 15px;
+            font-size: 2.2em;
+        }
+
+        .col {
+            height: 120px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row align-items-center">
+        <div class="col text-center pad">
+            <i class="bi bi-backspace coloring1 font-md no-pad">
+                .bi-backspace (apagar)
+            </i>
+        </div>
+        <div class="col text-center pad">
+            <i class="bi bi-arrow-clockwise coloring2 font-sm no-pad">
+                .bi-arrow-clockwise (retroceder)
+            </i>
+        </div>
+        <div class="col text-center pad">
+            <i class="bi bi-alarm-fill coloring3 font-lg no-pad">
+                .bi-alarm-fill (alarme)
+            </i>
+        </div>
+    </div>
+</body>
+
+</html>

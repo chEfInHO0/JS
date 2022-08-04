@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/lab.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="safearea"></div>
+    <div class="container">
+        <h4 class="msg">O que faremos hoje?</h4>
+        <div class="fake1">
+            <div class="hire"> 
+                <div class="btnhire">
+                    Quero Contratar
+                </div>
+                <div class="grid fog">
+                    <div class="resizea">
+                        <h4 class="fog">Ajax Limpeza</h4>
+                        <img class="small" src="assets/img/Ajax Limp PNG.png" alt="">
+                        <h4 class="fog"">(19) 1234-4321</h4>
+                    </div>
+                    <div class="resizeb">
+                        <h4 class="fog">Ajax Sistemas</h4>
+                        <img class="small" src="assets/img/Ajax Sist PNG.png" alt="">
+                        <h4 class="fog"">(19) 1234-4321</h4>
+                    </div>
+                    <div class="resizec">
+                        <h4 class="fog">Arbeit Consultoria</h4>
+                        <img class="smalla" src="assets/img/Arbeit Consult PNG.png" alt="">
+                        <h4 class="fog"">(19) 1234-4321</h4>
+                    </div>
+                    <div class="resized">
+                        <h4 class="fog">Arbeit Recursos Humanos</h4>
+                        <img class="smalla" src="assets/img/Arbeit RH PNG.png" alt="">
+                        <h4 class="fog"">(19) 1234-4321</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fake2">
+            <div class="beHired">
+                <div class="btnbeHired">
+                    Quero ser contratado
+                </div>
+                <div class="grid2 fog">
+                    <div class="resizee">
+                        <h4 class="fog">Ajax Limpeza</h4>
+                        <img class="small" src="assets/img/Ajax Limp PNG.png" alt="">
+                        <h4 class="fog"">(19) 1234-4321</h4>
+                    </div>
+                    <div class="resizef">
+                        <h4 class="fog">Ajax Sistemas</h4>
+                        <img class="small" src="assets/img/Ajax Sist PNG.png" alt="">
+                        <h4 class="fog">(19) 1234-4321</h4>
+                    </div>
+                    <div class="resizeg">
+                        <h4 class="fog">Arbeit Consultoria</h4>
+                        <img class="smalla" src="assets/img/Arbeit Consult PNG.png" alt="">
+                        <h4 class="fog">(19) 1234-4321</h4>
+                    </div>
+                    <div class="resizeh">
+                        <h4 class="fog">Arbeit Recursos Humanos</h4>
+                        <img class="smalla" src="assets/img/Arbeit RH PNG.png" alt="">
+                        <h4 class="fog">(19) 1234-4321</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const msg = document.querySelector('.msg')
+        const grid1 = document.querySelector('.grid')
+        const grid2 = document.querySelector('.grid2')
+        const limp = document.querySelector('.resizea')
+        const sist = document.querySelector('.resizeb')
+        const consult = document.querySelector('.resizec')
+        const rh = document.querySelector('.resized')
+        const limp2 = document.querySelector('.resizee')
+        const sist2 = document.querySelector('.resizef')
+        const consult2 = document.querySelector('.resizeg')
+        const rh2 = document.querySelector('.resizeh')
+        const fakewall1 = document.querySelector('.fake1')
+        const fakewall2 = document.querySelector('.fake2')
+        const hire = document.querySelector('.hire')
+        const hired = document.querySelector('.beHired')
+        const btnbeHired = document.querySelector('.btnbeHired')
+        const btnhire = document.querySelector('.btnhire')
+
+        btnbeHired.onmouseover = () => {
+            hired.style.backgroundColor = '#fff'
+        }
+        btnbeHired.onmouseout = () => {
+            hired.style.backgroundColor = 'rgb(70, 156, 70)'
+        }
+        btnhire.onmouseover = () => {
+            hire.style.backgroundColor = '#fff'
+        }
+        btnhire.onmouseout = () => {
+            hire.style.backgroundColor = 'rgb(70, 156, 70)'
+        }
+        fakewall1.onmouseover = () =>{
+            document.querySelector('body').style.backgroundColor ='#fff'
+            fakewall1.classList.add('grow')
+            hire.classList.add('grow')
+            hired.classList.add('none')
+            fakewall2.classList.add('none')
+            msg.classList.add('none')
+            grid1.classList.remove('fog')
+        }
+        fakewall1.onmouseout = () =>{
+            fakewall1.classList.remove('grow')
+            hire.classList.remove('grow')
+            hired.classList.remove('none')
+            fakewall2.classList.remove('none')
+            msg.classList.remove('none')
+            grid1.classList.add('fog')
+        }
+        fakewall2.onmouseover = () =>{
+            document.querySelector('body').style.backgroundColor ='#fff'
+            fakewall2.classList.add('grow')
+            hired.classList.add('grow')
+            hire.classList.add('none')
+            fakewall1.classList.add('none')
+            msg.classList.add('none')
+            grid2.classList.remove('fog')
+        }
+        fakewall2.onmouseout = () =>{
+            fakewall2.classList.remove('grow')
+            hired.classList.remove('grow')
+            hire.classList.remove('none')
+            fakewall1.classList.remove('none')
+            msg.classList.remove('none')
+            grid2.classList.add('fog')
+        }
+        function showInfo(x){
+    x.onmouseover = () =>{
+        let c= 0
+        let teste = x.getElementsByTagName('h4')
+        while (c != teste.length){
+            teste[c].classList.remove('fog')
+            c++
+        }
+    }
+}
+function hideInfo(x){
+    x.onmouseout = () =>{
+        let c= 0
+        let teste = x.getElementsByTagName('h4')
+        while (c != teste.length){
+            teste[c].classList.add('fog')
+            c++
+        }
+}
+}
+//End Function Declaration
+
+//Info Show/Hide Page PJ
+limp.onmouseover = ()=>{
+    showInfo(limp)
+}
+limp.onmouseout = ()=>{
+    hideInfo(limp)
+}
+sist.onmouseover = ()=>{
+    showInfo(sist)
+}
+sist.onmouseout = ()=>{
+    hideInfo(sist)
+}
+consult.onmouseover = ()=>{
+    showInfo(consult)
+}
+consult.onmouseout = ()=>{
+    hideInfo(consult)
+}
+rh.onmouseover = ()=>{
+    showInfo(rh)
+}
+rh.onmouseout = ()=>{
+    hideInfo(rh)
+}
+//End Info Show/Hide PJ
+
+//Info Page Show/Hide PF
+limp2.onmouseover = ()=>{
+    showInfo(limp2)
+}
+limp2.onmouseout = ()=>{
+    hideInfo(limp2)
+}
+sist2.onmouseover = ()=>{
+    showInfo(sist2)
+}
+sist2.onmouseout = ()=>{
+    hideInfo(sist2)
+}
+consult2.onmouseover = ()=>{
+    showInfo(consult2)
+}
+consult2.onmouseout = ()=>{
+    hideInfo(consult2)
+}
+rh2.onmouseover = ()=>{
+    showInfo(rh2)
+}
+rh2.onmouseout = ()=>{
+    hideInfo(rh2)
+}
+    </script>
+</body>
+</html>

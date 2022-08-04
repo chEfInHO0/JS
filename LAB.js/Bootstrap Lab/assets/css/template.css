@@ -1,0 +1,10 @@
+.big-height{
+    height: 100vh
+}
+.fullscreen{
+    transition: 1s all;
+    opacity: 1;
+}
+.fullscreen:hover{
+    width: 100vw;
+}

@@ -1,0 +1,27 @@
+.locate{
+    width: 100%;
+    border: 1px solid;
+}
+.box{
+    transition: 2s all;
+    margin: auto;
+    width: 200px;
+}
+.lista{
+    list-style-type: none;
+    border: 1px solid;
+    padding: 0;
+}
+.fog{
+    display: none;
+}
+.lista li:hover{
+    background-color: orange;
+    cursor: pointer;
+}
+.selected{
+    cursor: pointer;
+}
+.choose{
+    background-color: red;
+}

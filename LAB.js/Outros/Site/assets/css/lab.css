@@ -1,0 +1,169 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+.msg{
+    min-width: 300px;
+    transition:1s all;
+    z-index: 999;
+    font-size: 3em;
+    margin: auto;
+    margin-top: 50px;
+}
+.safearea{
+    font-size: 2em;
+    z-index: 998;
+    position: absolute;
+    color: transparent;
+    height: 100px;
+    width: 100%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    
+}
+.fake1,.fake2{
+    position: fixed;
+    transition: 1s all;
+    width: 50vw;
+    height: 100vh;
+}
+.fake2{
+    margin-left:50vw;
+}
+.hire,.beHired{
+    transition: 1s all;
+    position: absolute;
+    transition:1s all;
+    width: 100%;
+    height: 100vh;
+}
+.beHired{
+    margin-left: 0vw;
+}
+.grow{
+    transition:1s all;
+    width: 100%;
+    margin-left: 0vw;
+}
+.none{
+    display: none;
+}
+.fog{
+    opacity: 0;
+    transition: all 1s;
+}
+.btnhire,.btnbeHired{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s all;
+    font-size: 3em;
+    padding: 10px;
+    margin: auto;
+    margin-top: 30vh;
+    width: 40vw;
+    height: 15vh;
+    border: 1px solid;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.btnhire{
+    background-color:#fff;;
+}.btnbeHired{
+    background-color: #fff;
+}
+.btnhire:hover,.btnbeHired:hover{
+    background-color: rgb(70, 156, 70);
+    color: #DFF6FF;
+    cursor: pointer;
+} 
+.hire{
+    background-color: rgb(70, 156, 70);
+}
+.beHired{
+    background-color: rgb(70, 156, 70);
+}
+.resizea,.resizeb,.resizee,.resizef{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    transition: 1s all;
+}
+.resizec,.resized,.resizeg,.resizeh{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    transition: 1s all;
+}
+.resizea:hover,.resizeb:hover,.resizee:hover,.resizef:hover,.resizec:hover,.resized:hover,.resizeg:hover,.resizeh:hover{
+    padding: 30px;
+    border-style: solid;
+    border-spacing: 1px;
+    border-radius: 5px;
+    border-color: #DCD7C9;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+.grid,.grid2{
+    min-width: 250px;
+    transition: 1s all;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.smalla{
+    flex: 2;
+    width: 200px;
+    height: 100px;
+    transition: 1s all;
+
+}
+.small{
+    flex: 2;
+    width: 200px;
+    height: 150px;
+    transition: 1s all;
+}
+.vanish{
+    width: 1px;
+    font-size: 0.1em;
+    opacity: 0;
+}
+@media only screen and (max-width: 1050px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .fake1,.fake2{
+        margin-top: -150px;
+        transition: 1s all;
+        width: 100%;
+        height: 30%;
+    }
+    .fake2{
+        margin-top:30vw;
+        margin-left: 0vw;
+    }
+    .fake1:hover,.fake2:hover{
+        margin-top:0vw;
+        margin-left: 0vw;
+    }
+    .msg{
+        margin-top: 50vh;
+    }
+}

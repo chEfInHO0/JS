@@ -1,0 +1,3 @@
+npm uninstall <nome> //remove o pacote do projeto (tambem do package.json)
+
+npm uninstall lodash

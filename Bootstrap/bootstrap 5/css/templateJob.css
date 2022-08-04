@@ -1,0 +1,107 @@
+a,i{
+    text-align: center;
+    transition: .5s ease-in-out;
+    text-decoration: none;
+}
+.spray-green{
+    background-color: gray;
+    color: #fff;
+    height: 120px;
+}
+@keyframes blink {
+    0%{
+        opacity: 1;
+    }   
+    100%{
+        opacity: 0;
+    } 
+}
+.digit{
+    animation: blink 1s infinite;
+    border-right: 3px solid;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 113px;
+    padding: 20px 40px;
+}
+#navbar a{
+    color: #444;
+    width: 80px;
+}
+#navbar a:hover{
+    border-bottom: 5px solid #C1B696;
+}
+.myMenu a{
+    margin-left: 10px;
+    margin-right: 10px;
+    border-left: 4px solid #fff;
+    border-right: 4px solid #fff;
+    border-top: 4px solid #fff;
+    border-bottom: 5px solid #fff;
+}
+.myMenu .selected{
+    border-bottom: 5px solid #198754;
+}
+.margin-color{
+    background-color: #444;
+    height: 100vh;
+}
+.vaga-placer{
+    height: 60vh;
+}
+.lista-vagas{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+}
+.vaga{
+    border-radius: 15px;
+    border: 1px solid;
+    height: 100%;
+    width: inherit;
+}
+.btn{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.btn-place{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.back{
+    z-index: 2;
+    background-color: red;
+}
+.current{
+    z-index: 3;
+    background-color: yellow;
+}
+.next{
+    z-index: 1;
+    background-color: green;
+}
+.back,.current,.next{
+    height: 100%;
+    width: 55%;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes slidein {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+.grow{
+    animation: .3s forwards running slidein;
+}

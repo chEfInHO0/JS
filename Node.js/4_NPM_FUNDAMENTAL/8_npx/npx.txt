@@ -1,0 +1,5 @@
+npx é um executor de scripts, diferente do npm que instala um pacote, o npx realiza a execução de algum scripts
+
+
+npx cowsay ""
+npx cowsay -d ""

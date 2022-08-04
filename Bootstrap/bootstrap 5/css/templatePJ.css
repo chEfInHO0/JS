@@ -1,0 +1,123 @@
+.digit{
+    border-left: 4px solid #fff;
+    animation: blink 1s infinite ;
+}
+a,i{
+    text-align: center;
+    text-decoration: none;
+    transition: .5s all;
+}
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.spray-green{
+    background-color: #198754;
+    color: #fff;
+    height: 120px;
+}
+.spray-white{
+    background-color: #0d6efd ;
+    height: 100vh;
+}
+.formArea{
+    height: 100%vh;
+    background-color: #f8f9fa;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+#navbar{
+    padding: 40px 20px;
+}
+#navbar a{
+    width: 80px;
+    color: #444;
+}
+#navbar a:hover{
+    border-bottom: 5px solid #C1B696;
+}
+.myMenu a{
+    margin-left: 10px;
+    margin-right: 10px;
+    border-left: 4px solid #fff;
+    border-right: 4px solid #fff;
+    border-top: 4px solid #fff;
+    border-bottom: 5px solid #fff;
+}
+.myMenu .selected{
+    border-bottom: 5px solid #198754;
+}
+.img-fluid{
+    min-width: 200px;
+    max-width: 250px;
+}
+.text-img{
+    min-height: 255px;
+    max-height: 805px;
+    display: flex;
+    width: 90%;
+    margin-bottom: 25px;
+    border: 1px solid;
+}
+.text-img p{
+    padding-top: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.test{
+    background-color: #198754;
+}
+.vaga{
+    font-size: 0.9em;
+    padding: 10px;
+    min-height: 225px;
+    max-height: 400px;
+    margin-top: 25px; 
+    border: 3px solid #fff;
+    border-radius: 25px;
+    color: #fff;
+    width: 100%;
+}
+.lista-vagas{
+    padding: 20px;
+}
+.vaga p{
+    font-family: 'Courier New', Courier, monospace;
+}
+.title{
+    color: #fff;
+}
+@media only screen and (max-width:800px) {
+    .text-img{
+        flex-direction: column;
+    }
+    .img-fluid{
+        min-width: 150px;
+        max-width: 155px;
+    }
+    .vaga{
+        font-size: 0.6em;
+        width: 120%;
+        padding: 3px;
+        word-wrap: break-word;
+    }
+}
+@media only screen and (max-width:550px) {
+    #navbar{
+        font-size: 0.7em;
+        width: 100%;
+    }
+    .myMenu a{
+        padding: 0px
+    }
+    .myMenu a{
+        margin: 0;
+    }
+    .title{
+        font-size: 1em;
+    }
+}

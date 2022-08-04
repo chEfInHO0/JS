@@ -1,0 +1,163 @@
+/* General Configs */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    transition: all 2s;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+/* General Configs END*/
+
+
+/* General Pages Configuration*/
+/* Image related */
+.smalla{
+    width: 250px;
+    height: 100px;
+    transition: 1s all;
+
+}
+.small{
+    flex: 2;
+    width: 200px;
+    height: 150px;
+    transition: 1s all;
+}
+/* Image related END */
+
+/* MAIN FRAME MESSAGE CONFIG*/
+.msg{
+    min-width: 500px;
+    transition:1s all;
+    z-index: 999;
+    font-size: 3em;
+    margin: auto;
+    margin-top: 50px;
+}
+.safearea{
+    font-size: 2em;
+    z-index: 998;
+    position: absolute;
+    color: transparent;
+    height: 100px;
+    width: 100%;
+}
+/* MAIN FRAME MESSAGE CONFIG END*/
+.container{
+    display: flex;
+}
+.hire,.beHired{
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    transition: 1s all;
+}
+.hire{
+    background-color: #C2DED1;
+}
+.beHired{
+    margin-left: 50vw;
+    background-color: #CDC2AE;
+}
+.btn1,.btn2{
+    transition: 0.2s all;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    padding: 10px;
+    margin: auto;
+    margin-top: 30vh;
+    width: 40vw;
+    height: 20vh;
+    border: 1px solid;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.btn1{
+    background-color: #CDC2AE ;
+}
+.btn2{
+    background-color: #C2DED1 ;
+}
+.hover-div{
+    background-color: #ECE5C7;   
+}
+.hover-btn{
+    background-color: #354259;
+    color: #FFF;
+}
+/* General Pages Configuration END*/
+
+/* JS Style over Events*/
+.fullscreen{
+    margin-left: 0vw;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 997;
+}
+.vanish{
+    width: 1px;
+    font-size: 0.1em;
+    opacity: 0;
+}
+.fog{
+    opacity: 0;
+    transition: all 1s;
+}
+.resizea,.resizeb,.resizee,.resizef{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    transition: 1s all;
+}
+.resizec,.resized,.resizeg,.resizeh{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    transition: 1s all;
+}
+.resizea:hover,.resizeb:hover,.resizee:hover,.resizef:hover{
+    padding: 40px;
+    border-style: inset;
+    border-spacing: 2px;
+    border-radius: 5px;
+    border-color: #354259;
+    border-collapse: collapse;
+    background-color: #ECE5C7;
+}
+.resizec:hover,.resized:hover,.resizeg:hover,.resizeh:hover{
+    padding: 40px;
+    border-style: inset;
+    border-spacing: 2px;
+    border-radius: 5px;
+    border-color: #354259;
+    border-collapse: collapse;
+    background-color: #ECE5C7;
+}
+.grid,.grid2{
+    min-width: 250px;
+    transition: 1s all;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.mrg-top{
+    margin-top: 20vh;
+}
+.none{
+    display: none;
+}

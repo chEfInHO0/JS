@@ -1,0 +1,46 @@
+body{
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.center{
+    text-align: center;
+    margin-top: 15%;
+    font-size: 1.5em;
+}
+button{
+    border-radius: 8px;
+    width: 300px;
+    transition: 1s all;
+}
+.increase:hover{
+    background-color: green;
+    color: #fff;
+}
+.decrease:hover{
+    background-color: red;
+    color: #fff;
+}
+.reset:hover{
+    background-color: #000;
+    color: #fff;
+}
+.line button{
+    font-size: 0.6em;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+#contador{
+    font-size: 2em;
+}
+.black{
+    color: #000;    
+}
+.green{
+    color:green;
+}
+.red{
+    color: red;
+}
