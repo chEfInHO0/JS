@@ -1,3 +1,0 @@
-npm update (atualiza todos os pacotes)
-npm update <nome> (atualiza pacote especifico)
-npx npm-check-updates -u
