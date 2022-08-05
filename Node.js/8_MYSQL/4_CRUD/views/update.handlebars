@@ -1,0 +1,17 @@
+<h1 class="text-center">
+    Alterar Cadastro
+</h1>
+
+<div class="row justify-content-center text-center gx-0">
+    <div class="col-6">
+        <form action="/db/update/{{currData.id}}" method="POST" class="form-control">
+            <div class="mb-3">
+                <label for="occupation" class="form-label"> Cargo:</label>
+
+                <input type="text" name="occupation" id="occupation" class="form-control " value="{{currData.occupation}}">
+
+            </div>
+            <input type="submit" class="btn btn-primary" value="Cadastrar">
+        </form>
+    </div>
+</div>
