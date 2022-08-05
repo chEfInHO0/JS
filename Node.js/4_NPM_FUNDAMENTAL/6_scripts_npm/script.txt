@@ -1,5 +1,0 @@
-npm run test
-npm start
-npm run serve
-
-//pode executar scripts que são definidos no package.json do projeto

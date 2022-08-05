@@ -1,2 +1,0 @@
-//dentro da pasta do projeto
-npm init -y
