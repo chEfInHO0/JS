@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 class="text-center">
     Cadastro de Funções
 </h1>
@@ -41,5 +42,32 @@
        
            
         
+=======
+<h1 class="text-center">CRUD TESTE</h1>
+<div class="row text-center justify-content-center">
+    <div class="col-6 ">
+        <form action="/db/send" method="post" class="form-control">
+            <div class="mb-3">
+                <input type="text" name="occupation" id="occupation" class="form-control"
+                    placeholder="Digite o cargo a cadastrar">
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Cadastrar" class="btn btn-secondary">
+            </div>
+        </form>
+    </div>
+</div>
+<br><br><br>
+<h3 class="text-center">
+    Cargos cadastrados:
+</h3>
+<div class="row text-center justify-content-center">
+    <div class="col-6 ">
+        <ul>
+        {{#each cargos}}
+        <li>{{occupation}}</li>
+        {{/each}}
+        </ul>
+>>>>>>> 84a20dd745088277ce7edad6c0943b371f7a984f
     </div>
 </div>
