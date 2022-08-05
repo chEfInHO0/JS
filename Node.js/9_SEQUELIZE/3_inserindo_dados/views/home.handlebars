@@ -1,1 +1,23 @@
-<h1 class="text-center">Hello Sequelize</h1>
+<h1 class="mt-5 text-center">
+    Home
+</h1>
+
+<select class="form-select" name="occupation">
+    <option selected>Selecione o Cargo</option>
+    {{#each user}}
+    <option value="{{occupation}}">{{occupation}}</option>
+    {{/each}}
+</select>
+
+<input type="range" name="periculosidade" class="form-range perc" min="15" max="100" oninput="getRangeValue()">
+
+<input type="text" name="range-reader" class="form-input reader" readonly >
+
+<script>
+    const rangePerc = document.querySelector('.perc')
+    const reader = document.querySelector('.reader')
+    function getRangeValue(){
+        reader.value = rangePerc.value
+    }
+    getRangeValue()
+</script>

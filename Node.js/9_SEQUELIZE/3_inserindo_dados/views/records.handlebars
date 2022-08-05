@@ -1,0 +1,24 @@
+<h1 class="text-center">Registros</h1>
+<div class="row justify-content-center text-center">
+    <div class="col-6">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Occupation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {{#each user}}
+                    <td>{{id}}</td>
+                    <td>{{name}}</td>
+                    <td>{{occupation}}</td>
+                    {{/each}}
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+</div>
