@@ -1,48 +1,3 @@
-<<<<<<< HEAD
-<h1 class="text-center">
-    Cadastro de Funções
-</h1>
-
-<div class="row justify-content-center text-center gx-0">
-    <div class="col-6">
-        <form action="/db/send" method="POST" class="form-control">
-            <div class="mb-3">
-                <label for="occupation" class="form-label"> Cargo:</label>
-
-                <input type="text" name="occupation" id="occupation" class="form-control ">
-
-            </div>
-            <input type="submit" class="btn btn-primary" value="Cadastrar">
-        </form>
-    </div>
-</div>
-<h3 class="text-center mt-5">Cargos Cadastrados</h3>
-<div class="row justify-content-center text-center gx-0">
-    <div class="col-6">
-       <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Cargo</th>
-                <th>Excluir</th>
-                <th>Alterar</th>
-            </tr>
-        </thead>
-        <tbody> 
-            
-            {{#each dados}}
-            <tr>
-                <td>{{occupation}}</td>
-                <td><a href="/db/delete/{{id}}"><div class="btn btn-outline-danger"><i class="bi bi-x-circle-fill"></i></div></a></td>
-                <td><a href="/db/update/{{id}}"><div class="btn btn-outline-warning"><i class="bi bi-pencil-square"></i></div></a></td>
-            </tr>
-            {{/each}}
-            
-        </tbody>
-       </table>
-       
-           
-        
-=======
 <h1 class="text-center">CRUD TESTE</h1>
 <div class="row text-center justify-content-center">
     <div class="col-6 ">
@@ -68,6 +23,5 @@
         <li>{{occupation}}</li>
         {{/each}}
         </ul>
->>>>>>> 84a20dd745088277ce7edad6c0943b371f7a984f
     </div>
 </div>
