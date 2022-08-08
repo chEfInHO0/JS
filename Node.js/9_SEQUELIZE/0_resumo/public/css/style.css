@@ -1,0 +1,14 @@
+h3:hover{
+    cursor: pointer;
+}
+p{
+    height: 100%;
+}
+.col-8{
+    min-height: 75px;
+}
+.none{
+    opacity: 0;
+    height: 0px;
+    display: none;
+}
