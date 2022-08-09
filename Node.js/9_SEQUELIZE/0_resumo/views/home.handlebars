@@ -96,10 +96,36 @@
             <i>
                 const user = require(./models/User) <br>
                 await user.destroy(<strong>{where:{id:id}}</strong>)<br>
+            </i><br>
+            Sem o <strong>where</strong> o comando de remação e de atualização de dados não funciona, para evitar que a alteração ou exclusão seja realizada na tabela inteira
+        </p>
+    </div>
+    <hr>
+    <div class="col-8 " onclick="setState(this)">
+        <h3 class="text-center">Atualização de dados</h3>
+        <p class="mt-4">
+            Para a Visualização de dados devemos importar nosso model para o arquivo index.js e depois através dele executar o método <strong>update</strong> para atualizar um dado da tabela, para que os valores sejam atualizados devemos passar junto do <strong>update</strong>, um <strong>novo objeto com os novos valores</strong> e um <strong>where que identifique o item que sera atualizado</strong><br>
+            <i>
+                const user = require(./models/User) <br>
+                const name = req.body.name <br>
+                const occupation = req.body.occupation <br>
+                await User.update(<strong>{name,occupation,newsletter},{where:{id:id}}</strong>) <br>
             </i>
         </p>
     </div>
     <hr>
+    <div class="col-8 " onclick="setState(this)">
+        <h3 class="text-center">Relacionamento entre tabelas</h3>
+        <p class="mt-4">
+            Para criar relacionamento entre tabelas precisamos de lógicamente ao menos 2 tabelas, para esse exemplo continuaremos a usar o 
+            <i>
+                const user = require(./models/User) <br>
+                const name = req.body.name <br>
+                const occupation = req.body.occupation <br>
+                await User.update(<strong>{name,occupation,newsletter},{where:{id:id}}</strong>) <br>
+            </i>
+        </p>
+    </div>
     <script>
         function setState(obj){
             const ob = Array.from(obj.children)
