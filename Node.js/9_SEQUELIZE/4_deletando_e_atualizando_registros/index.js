@@ -6,13 +6,40 @@ const conn = require('./db/conn')
 
 const User = require('./models/User')
 
-app.use(express.static('public'))
+app.use(express.static('./public/assets'))
 
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
 app.engine('handlebars', exphbs.engine())
 app.set('view engine','handlebars')
+
+app.post('/rewrite', async (req,res)=>{
+    console.log(req.body)
+    const id = req.body.id
+    const name = req.body.name
+    const occupation = req.body.occupation
+    let newsletter = req.body.newsletter
+    if (newsletter == 'on'){
+        newsletter = true
+    }else{
+        newsletter = false
+    }
+    await User.update({name,occupation,newsletter},{where:{id:id}})
+    res.redirect('/records')
+})
+
+app.get('/rewrite/:id',async (req,res) => {
+    const id = req.params.id
+    const user = await User.findOne({raw:true,where:{id:id}})
+    console.log(user)
+    res.render('changeuser',{user})
+})
+app.get('/delete/:id',async (req,res) => {
+    const id = req.params.id
+    await User.destroy({where:{id:id}})
+    res.redirect('/records')
+})
 
 app.get('/create',(req,res) => {
     res.render('adduser')

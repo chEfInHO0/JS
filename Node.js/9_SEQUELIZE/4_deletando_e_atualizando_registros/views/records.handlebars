@@ -7,6 +7,8 @@
                     <th>#</th>
                     <th>Name</th>
                     <th>Occupation</th>
+                    <th>Delete</th>
+                    <th>Rewrite</th>
                 </tr>
             </thead>
             <tbody>
@@ -15,6 +17,8 @@
                     <td>{{id}}</td>
                     <td>{{name}}</td>
                     <td>{{occupation}}</td>
+                    <td><a href="/delete/{{id}}"><div class="btn btn-outline-danger"><i class="bi bi-x-circle-fill"></i></div></a></td>
+                    <td><a href="/rewrite/{{id}}"><div class="btn btn-outline-warning"><i class="bi bi-pencil-square"></i></div></a></td>
                 </tr>
                 {{/each}}
             </tbody>
