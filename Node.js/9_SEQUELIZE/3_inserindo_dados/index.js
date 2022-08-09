@@ -28,6 +28,7 @@ app.post('/create',(req,res) => {
         newsletter = false
     }
     User.create({name,occupation,newsletter})
+
     res.redirect('/create')
 })
 
