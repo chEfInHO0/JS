@@ -1,0 +1,62 @@
+/* General Config */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+a,i{
+    text-decoration: none;
+    transition: 2s;
+}
+footer i{
+    padding: 4px;
+    border-radius: 50%;
+    color:#000
+}
+footer i:hover{
+    background-color: #6e6e6e;
+    
+}
+/* Main Page */
+.hd{
+    background-color: #198754;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.small-text{
+    font-size: 0.9em;
+}
+.fig-text{
+    font-size: 0.5em;
+    color: #6e6e6e;
+}
+.small-height{
+    height:50px
+}
+a.btn:hover {
+    background-color: #198754;
+    color: #fff;
+}
+.logo{
+    font-size: 1.5em;
+}
+.newsletter-area{
+    margin-top: 50px;
+}
+.footer-area{
+    max-height: 500px;
+    min-height: 150px;
+    padding: 10px;
+    background-color: #ccc;
+}
+.info-title{
+    height: 35px;
+    font-weight: bold;
+}
+.info{
+    height: 70px;
+    font-weight: bold;
+}

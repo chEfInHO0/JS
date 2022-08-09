@@ -1,0 +1,28 @@
+<h1 class="text-center">Alterar usuário: </h1>
+<div class="row justify-content-center text-center">
+    <div class="col-6">
+        <form action="/rewrite" method="post" class="form-control">
+        <div class="mb-3">
+            <input type="hidden" name="id" class="form-control" value="{{user.id}}">
+            <input type="text" name="name" class="form-control" placeholder="Digite o nome do usuario" value="{{user.name}}">
+        </div>
+        <div class="mb-3">
+            <input type="text" name="occupation" class="form-control" placeholder="Digite o cargo" value="{{user.occupation}}">
+        </div>
+        <div class="mb-3">
+            {{#if user.newsletter}}
+                <label for="" class="form-check-label pe-3"> Receber Promoções </label><input type="checkbox" name="newsletter" class="form-check-input" checked>
+            {{else}}
+                <label for="" class="form-check-label pe-3"> Receber Promoções </label><input type="checkbox" name="newsletter" class="form-check-input">
+            {{/if}} 
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Cadastrar" class="btn btn-secondary">
+            <a href="/records"><input type="button" value="Ver registros" class="btn btn-outline-secondary"></a>
+        </div>
+        <div class="mb-3">
+            
+        </div>
+        </form>
+    </div>
+</div>

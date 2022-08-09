@@ -28,7 +28,8 @@ app.post('/create',(req,res) => {
         newsletter = false
     }
     User.create({name,occupation,newsletter})
-    res.redirect('/users/create')
+
+    res.redirect('/create')
 })
 
 app.get('/records', async (req,res)=> {

@@ -1,0 +1,144 @@
+<div class="row gx-0 justify-content-center ">
+    <div class="col-10 mt-1">
+        <h1 class="text-center">Resumo Sequelize</h1>
+    </div>
+    <hr>
+    <div class="col-8 " onclick="setState(this)">
+        <h3 class="text-center" >Instalação</h3>
+        <p class="mt-4">
+            Assim como todos os pacotes do node, para instalar o sequelize precisamos utilizar o node package manager(npm), <br>
+            <u><i>* npm install sequelize mysql2</i></u><br>
+            instalamos também o drive mysql2 pois o sequelize necessita dele para funcionar corretamete, após a instalação execute o comando
+            <u><i>* npm update</i></u>
+            para a prevenção de erros
+        </p>
+    </div>
+    <hr>
+    <div class="col-8"  onclick="setState(this)">
+        <h3 class="text-center">Conexão com o banco</h3>
+        <p class="mt-4">
+            Para realizar a conexão com o banco de dados vamos realizar da mesma maneira que é feita na criação de <i>Pools</i> pelo mysql,<br>
+            criamos uma pasta separada <i>(db)</i> para o nosso arquivo de conexão <i>(conn)</i> e então realizaremos os seguintes comandos: <br><br>
+            
+            
+            <i>const {Sequelize} = require('sequelize') <br>
+            const sequelize = new Sequelize(<strong>'a','b','c',{host:d,
+            dialect:e}</strong>)<br>
+            module.exports = sequelize</i> <br>
+            <br>
+        Onde : <br>
+        <strong>a => nome do banco de dados ('teste')<br>
+        b => usuario do banco de dados('root')<br>
+        c => senha do banco de dados ('')<br>
+        d => nome do host para realizar a conexão ('localhost')<br>
+        e => dialeto do banco de dados (mysql)<br></strong><br>
+
+            Para simplificação importamos apenas o objeto Sequelize para a parte da conexão, para realizar a conexão devemos importar o modulo criado agora no index.js e realizar o método sync: <br>
+           <i> const conn = require('./db/conn') <br>
+            conn.sync() <br></i>
+
+            isso gera uma conexão persistente com o banco de dados
+        </p><br><br>
+    </div>
+    <hr>
+    <div class="col-8" onclick="setState(this)">
+        <h3 class="text-center">Criação de Models</h3>
+        <p class="mt-4">
+            A grande vantegem de utilizar o Sequelize do que querys com a própria linguagem do SQL é a possibilidade da criação de modelos para a criação de tabelas dentro do banco de dados <br>
+            Para isso vamos criar uma pasta nova (models) e criar um novo arquivo de model (por convensão é usado o mesmo nome da tabela que vai ser criada no banco de dados, ex: vamos criar a tabela users, então vamos dar o nome para o arquivo de User.js)<br><br>
+            const {Datatypes} = require('sequelize') <br>
+            const db = require('../db/conn') <br>
+            const user = db.define(<strong>'a',{b:{type:c,allowNull:d,required:e},...}</strong>) <br>
+            module.exports = user <br><br>
+
+        Onde : <br>
+        <strong>a => nome da tabela ('User')<br>
+        b => nome da coluna da tabela('nome')<br>
+        c => tipo do dado que a coluna vai armazenar ('DataTypes.STRING')<br>
+        d => valor do AllowNull -define se aceita ou não valores nulos- ele é booleano (false)<br>
+        e => valor do required -define se o campo é obrigatorio ou não- ele é booleano (true)<br></strong><br>
+        </p>
+    </div>
+    <hr>
+    <div class="col-8 " onclick="setState(this)">
+        <h3 class="text-center">Criação de dados</h3>
+        <p class="mt-4">
+            Para a criação de dados devemos importar nosso model para o arquivo index.js e depois através dele executar o método create: <br>
+            <i>
+                const user = require(./models/User) <br>
+                await user.create(<strong>{a,b,c,...}</strong>)<br>
+                <br>
+                Onde: <br>
+                <strong>a,b,c => são os atributos que foram criados durante a criação do model (Criação de Models - b)</strong>
+
+            </i>
+        </p>
+    </div>
+    <hr>
+    <div class="col-8 " onclick="setState(this)">
+        <h3 class="text-center">Visualização de dados</h3>
+        <p class="mt-4">
+            Para a Visualização de dados devemos importar nosso model para o arquivo index.js e depois através dele executar o método <strong>findAll</strong> para resgatar todos os dados da tabela, ou <strong>findOne({where:a})</strong> para encontrar apenas registros que atendam os requesitos colocados em <strong>a</strong> <br>
+            <i>
+                const user = require(./models/User) <br>
+                await user.findAll(<strong>{raw:true}</strong>)<br>
+                await user.findOne(<strong>{where:{id:1}}</strong>)<br>
+
+            é importante executar as funções de query da ORM em modo asyn para garantir que o programa vai ter o tempo necessário para encontrar o que precisa
+            </i>
+        </p>
+    </div>
+    <hr>
+    <div class="col-8 " onclick="setState(this)">
+        <h3 class="text-center">Remoção de dados</h3>
+        <p class="mt-4">
+            Para a Visualização de dados devemos importar nosso model para o arquivo index.js e depois através dele executar o método <strong>findAll</strong> para resgatar todos os dados da tabela, ou <strong>findOne({where:a})</strong> para encontrar apenas registros que atendam os requesitos colocados em <strong>a</strong> <br>
+            <i>
+                const user = require(./models/User) <br>
+                await user.destroy(<strong>{where:{id:id}}</strong>)<br>
+            </i><br>
+            Sem o <strong>where</strong> o comando de remação e de atualização de dados não funciona, para evitar que a alteração ou exclusão seja realizada na tabela inteira
+        </p>
+    </div>
+    <hr>
+    <div class="col-8 " onclick="setState(this)">
+        <h3 class="text-center">Atualização de dados</h3>
+        <p class="mt-4">
+            Para a Visualização de dados devemos importar nosso model para o arquivo index.js e depois através dele executar o método <strong>update</strong> para atualizar um dado da tabela, para que os valores sejam atualizados devemos passar junto do <strong>update</strong>, um <strong>novo objeto com os novos valores</strong> e um <strong>where que identifique o item que sera atualizado</strong><br>
+            <i>
+                const user = require(./models/User) <br>
+                const name = req.body.name <br>
+                const occupation = req.body.occupation <br>
+                await User.update(<strong>{name,occupation,newsletter},{where:{id:id}}</strong>) <br>
+            </i>
+        </p>
+    </div>
+    <hr>
+    <div class="col-8 " onclick="setState(this)">
+        <h3 class="text-center">Relacionamento entre tabelas</h3>
+        <p class="mt-4">
+            Para criar relacionamento entre tabelas precisamos de lógicamente ao menos 2 tabelas, para esse exemplo continuaremos a usar o 
+            <i>
+                const user = require(./models/User) <br>
+                const name = req.body.name <br>
+                const occupation = req.body.occupation <br>
+                await User.update(<strong>{name,occupation,newsletter},{where:{id:id}}</strong>) <br>
+            </i>
+        </p>
+    </div>
+    <script>
+        function setState(obj){
+            const ob = Array.from(obj.children)
+            for(let i=0;i<ob.length;i++){
+            if(ob[i].tagName == 'P'){
+                if(ob[i].classList.contains('none')){
+                    const down = setTimeout(()=>{ob[i].classList.remove('none')},50)
+                }else{
+                    const up = setTimeout(()=>{ob[i].classList.add('none')},50)
+                }
+            }
+        }
+        }
+        
+    </script>
+</div>

@@ -10,15 +10,14 @@
                 </tr>
             </thead>
             <tbody>
+                {{#each user}}
                 <tr>
-                    {{#each user}}
                     <td>{{id}}</td>
                     <td>{{name}}</td>
                     <td>{{occupation}}</td>
-                    {{/each}}
                 </tr>
+                {{/each}}
             </tbody>
-        </table>
-        
+        </table> 
     </div>
 </div>
