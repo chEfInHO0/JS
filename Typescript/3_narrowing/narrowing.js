@@ -56,6 +56,7 @@ calculator([1, 4, 3], 'sum');
 calculator([10, 4, 3], 'mult');
 calculator([100, 2, 6], 'div');
 //calculator([13,44,31],'sub')
+//instanceof
 var User = /** @class */ (function () {
     function User(name) {
         this.name = name;
@@ -83,3 +84,25 @@ function greet(obj) {
 }
 greet(luccas);
 greet(marcos);
+//Operador in
+var Dog = /** @class */ (function () {
+    function Dog(name, breed) {
+        this.name = name;
+        if (breed) {
+            this.breed = breed;
+        }
+    }
+    return Dog;
+}());
+var nick = new Dog('Chico Flor de Liz', 'Chiuhhuahuahuahuahue');
+var estopinha = new Dog('Estopinha');
+function showDogBreed(dog) {
+    if ('breed' in dog) {
+        console.log("".concat(dog.name, " \u00E9 da ra\u00E7a ").concat(dog.breed));
+    }
+    else {
+        console.log("".concat(dog.name, " \u00E9 um cachorrinho SRD"));
+    }
+}
+showDogBreed(nick);
+showDogBreed(estopinha);

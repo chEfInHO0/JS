@@ -22,6 +22,8 @@ sum(10,5)
 sum('55','6')
 sum(15,'6')
 
+//verificar se existe o dado
+
 type opr = 'sum'|'mult'|'div'
 
 function calculator(val:number[],operation:opr){
@@ -43,6 +45,8 @@ calculator([10,4,3],'mult')
 calculator([100,2,6],'div')
 //calculator([13,44,31],'sub')
 
+
+//instanceof
 class User{
     name:string
     constructor(name:string){
@@ -72,3 +76,31 @@ function greet(obj:object){
 
 greet(luccas)
 greet(marcos)
+
+//Operador in
+
+class Dog{
+    name:string
+    breed:string
+    constructor(name:string,breed?:string){
+        this.name = name
+        if(breed){
+            this.breed = breed
+        }
+    }
+}
+
+const nick = new Dog('Chico Flor de Liz','Chiuhhuahuahuahuahue')
+
+const estopinha = new Dog('Estopinha')
+
+function showDogBreed(dog:Dog){
+    if('breed' in dog){
+        console.log(`${dog.name} é da raça ${dog.breed}`)
+    }else{
+        console.log(`${dog.name} é um cachorrinho SRD`)
+    }
+}
+
+showDogBreed(nick)
+showDogBreed(estopinha)
