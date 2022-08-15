@@ -1,62 +1,112 @@
 /* General Config */
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 20px;
 }
-a,i{
+
+a,
+i {
     text-decoration: none;
     transition: 2s;
 }
-footer i{
+
+footer i {
     padding: 4px;
     border-radius: 50%;
-    color:#000
+    color: #000
 }
-footer i:hover{
+
+footer i:hover {
     background-color: #6e6e6e;
-    
+
 }
+
 /* Main Page */
-.hd{
+.hd {
     background-color: #198754;
-    height: 80px;
+    height: inherit;
     justify-content: center;
     align-items: center;
     display: flex;
 }
-.small-text{
+
+.small-text {
     font-size: 0.9em;
 }
-.fig-text{
+
+.fig-text {
     font-size: 0.5em;
     color: #6e6e6e;
 }
-.small-height{
-    height:50px
+
+.small-height {
+    height: 50px
 }
+
 a.btn:hover {
     background-color: #198754;
     color: #fff;
 }
-.logo{
+
+.logo {
     font-size: 1.5em;
 }
-.newsletter-area{
-    margin-top: 50px;
-}
-.footer-area{
-    max-height: 500px;
-    min-height: 150px;
-    padding: 10px;
+
+.menu-area{
+    max-height: 250px;
+    min-height: 120px;
+    padding: 4px;
     background-color: #ccc;
 }
-.info-title{
+
+.newsletter-area {
+    margin-top: 50px;
+}
+
+.footer-area {
+    max-height: 500px;
+    min-height: 150px;
+    padding: 4px;
+    background-color: #ccc;
+}
+.info-title {
     height: 35px;
     font-weight: bold;
 }
-.info{
+
+.info {
     height: 70px;
     font-weight: bold;
+}
+
+.logo-area {
+    padding: 15px;
+}
+
+.selected {
+    transition: 0.1s all linear;
+    border-top: 4px solid #ccc;
+    border-left: 4px solid #ccc;
+    border-right: 4px solid #ccc;
+    border-bottom: 4px solid #6e6e6e;
+}
+
+.selected:hover {
+    border: 4px solid #198754;
+}
+
+.digit{
+    animation: blink 1.5s infinite;
+    border-right: 4px solid #000;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
