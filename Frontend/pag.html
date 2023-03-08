@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação de HTML/CSS/JS</title>
+    <style>
+        body {
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+            margin: 0;
+        }
+
+        .title-text {
+            font-size: 3rem;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px;
+        }
+
+        .center-text{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .smaller-text {
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .smaller-text-p{
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .toy-box {
+            height: 200px;
+            width: 200px;
+            border: 2px solid #000;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+        #magic-box {
+            height: 100px;
+            width: 100px;
+            border: 2px solid #f00;
+            background-color: #f00;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            transition: .7s;
+        }
+        .regular{
+            background-color: #f00;
+        }
+        .circle{
+            border-radius: 50%;
+            border-color: #00F !important;
+            background-color: #00F !important;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title-text"> HTML/CSS/JS </h1>
+
+    <h3 class="smaller-text">HTML</h3>
+    <p class="smaller-text-p"> Funciona como o esqueleto para a construção de um site ou aplicativo web</p>
+    <h3 class="smaller-text">CSS</h3>
+    <p class="smaller-text-p"> Tem a função de deixar o site mais atrativo aos olhos do usuário</p>
+    <h3 class="smaller-text">JS</h3>
+    <p class="smaller-text-p"> É responsável por todas as ações e transições que ocorrem no site  </p>
+    <br><br>
+    <h4 class="smaller-text">Exemplo de HTML + CSS + JS</h4>
+    <h6 class="center-text">clique na área colorida</h6>
+    <div class="toy-box"> 
+        <div id="magic-box" class="regular"></div>
+    </div>
+        
+    <script>
+        let magic = document.querySelector('#magic-box')
+        console.log(magic.classList.contains('regular'))
+        magic.addEventListener('click', () => {
+            if (magic.classList.contains('regular')) {
+                magic.classList.replace('regular','circle')
+            } else {
+                magic.classList.replace('circle','regular')
+            }
+        })
+    </script>
+</body>
+
+</html>
